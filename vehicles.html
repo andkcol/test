@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Star Wars Vehicle Information</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <h1>Star Wars Trivia Information</h1>
+        <div class="shadow" id="lnks">
+            <a href="index.html">Home</a>
+            <a href="characters.html">Characters</a>
+            <a href="vehicles.html">Vehicles</a>
+            <a href="places.html">Places</a>
+        </div>
+        
+        <div id="targetDiv">
+        </div>
+        <button type="button" onclick="loadData('https://swapi.dev/api/starships/')">Click for Information</button>
+        <div id="footer" class="shadow">All Rights Reserved &copy;</div>        
+
+        <script>
+            
+        async function loadData(url) {
+            var div = "<ol>";
+            var response = await fetch(url);
+            var data = await response.json();
+            var count = Math.floor(Math.random()*9);
+
+            div += "<li>Name: " + data["results"][count]["name"] + "</li>";
+            div += "<li>Model: " + data["results"][count]["model"] + "</li>";
+            div += "<li>Manufacturer: " + data["results"][count]["manufacturer"] + "</li>";
+            div += "<li>Value: $" + data["results"][count]["cost_in_credits"] + "</li>";
+            div += "<li>Crew: " + data["results"][count]["mass"] + "</li>";
+            div += "</ol>";
+
+            document.getElementById("targetDiv").innerHTML = div;
+        }
+        </script>
+    </body>
+</html>

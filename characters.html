@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Star Wars Character Information</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <h1>Star Wars Trivia Information</h1>
+        <div class="shadow" id="lnks">
+            <a href="index.html">Home</a>
+            <a href="characters.html">Characters</a>
+            <a href="vehicles.html">Vehicles</a>
+            <a href="places.html">Places</a>
+        </div>
+        <div id="targetDiv">
+        </div>
+        <button type="button" onclick="loadData('https://swapi.dev/api/people/')">Click for Information</button>
+        <div id="footer" class="shadow">All Rights Reserved &copy;</div>       
+
+        <script>
+            
+        async function loadData(url) {
+            var div = "<ol>";
+            var response = await fetch(url);
+            var data = await response.json();
+            var count = Math.floor(Math.random()*9);
+
+            div += "<li>Name: " + data["results"][count]["name"] + "</li>";
+            div += "<li>Eye Color: " + data["results"][count]["eye_color"] + "</li>";
+            div += "<li>Birth Year: " + data["results"][count]["birth_year"] + "</li>";
+            div += "<li>Height: " + data["results"][count]["height"] + " cm</li>";
+            div += "<li>Weight: " + data["results"][count]["mass"] + " kg</li>";
+            div += "</ol>";
+
+            document.getElementById("targetDiv").innerHTML = div;
+        }
+        </script>
+    </body>
+</html>

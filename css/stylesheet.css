@@ -1,0 +1,100 @@
+h1 {
+    color: #d5e219;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-image: url(../images/stars.png);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+}
+
+img {
+    width: 500px;
+    height: auto;
+}
+
+#photos {
+    text-align: center;
+}
+
+#lnks {
+    background-color: #d5e219;
+    text-align: center;
+    padding: 7px;
+    margin-bottom: 5px;
+}
+
+#top {
+    background-color: #d5e219;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+li {
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-top: 0ch;
+    border-right: 0ch;
+    border-left: 0ch;
+    box-shadow: 3px 3px 5px 6px black;
+    margin-bottom: 30px;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#targetDiv {
+    text-align: center;
+    background-color: black;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    display: block;
+    width: 150px;
+    height: 50px;
+}
+
+#footer {
+    margin: 30px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+    background-color: #d5e219;
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+
+#para {
+    text-align: center;
+}
+
+p {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 150px;
+    margin-right: 180px;
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    background-color: #d5e219;
+}
